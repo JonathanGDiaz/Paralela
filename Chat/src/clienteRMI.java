@@ -13,7 +13,7 @@ public class clienteRMI {
             String nombre = JOptionPane.showInputDialog("Ingresa tu nombre");
             String nom = nombre;
             // System.setProperty("java.rmi.server.hostname", "192.168.1.13");
-            Registry rmii = LocateRegistry.getRegistry("localhost", 1111);
+            Registry rmii = LocateRegistry.getRegistry("192.168.122.230", 1111);
             chatServidor servidor = (chatServidor) rmii.lookup("Chat");
             new Thread(new implementacionChatCliente(nom, servidor)).start();
         } catch (Exception e) {
