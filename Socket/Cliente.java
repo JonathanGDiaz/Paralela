@@ -19,7 +19,6 @@ public class Cliente {
         Socket socket = new Socket(HOST, PUERTO);
         Scanner in = new Scanner(System.in);
         try {
-            BufferedReader entrada = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter salida = new PrintWriter(
                     new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
             while (true) {
