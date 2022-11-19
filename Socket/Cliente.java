@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class Cliente {
     public static final int PUERTO = 1111;
-    public static final String HOST = "localhost";
+    public static final String HOST = "192.168.43.193";
 
     public static void main(String[] args) throws IOException {
         System.out.println("Host " + HOST);
