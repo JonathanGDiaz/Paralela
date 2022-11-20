@@ -89,8 +89,8 @@ public class implementacionCliente extends UnicastRemoteObject implements Runnab
                         servidor.registro(tempArr, id);
                     } else {
                         int tam = Integer.parseInt(txtTam.getText());
-                        if (tam >= 10000 && tam < 100000)
-                            tam = tam * 1000;
+                        // if (tam >= 10000 && tam < 100000)
+                        // tam = tam * 1000;
                         Random random = new Random();
                         int temp = 0;
                         char[] tempArr = new char[tam];

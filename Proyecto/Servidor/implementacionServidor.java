@@ -26,15 +26,14 @@ public class implementacionServidor extends UnicastRemoteObject implements conta
 
     @Override
     public void registro(char[] cadena, int id) throws RemoteException {
-        if (!primerCliente.equals("") && !segundoCliente.equals(""))
+        if (id == 0)
+            primerCliente = new String(cadena);
+        else if (id == 1)
+            segundoCliente = new String(cadena);
+        if (!primerCliente.equals("") && !segundoCliente.equals("")) {
             arr = primerCliente.concat(segundoCliente);
-        else {
-            if (id == 0)
-                primerCliente = new String(cadena);
-            else if (id == 1)
-                segundoCliente = new String(cadena);
+            System.out.println("Cadena creada");
         }
-        System.out.println("Cadena creada");
     }
 
     @Override
