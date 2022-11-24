@@ -13,7 +13,7 @@ import Servidor.contadorServidor;
 public class primerCliente {
     public static void main(String[] args) {
         try {
-            Registry rmii = LocateRegistry.getRegistry("localhost", 1111);
+            Registry rmii = LocateRegistry.getRegistry("192.168.43.122", 1111);
             try {
                 contadorServidor servidor = (contadorServidor) rmii.lookup("Contador");
                 new Thread(new implementacionCliente(servidor, 0)).start();

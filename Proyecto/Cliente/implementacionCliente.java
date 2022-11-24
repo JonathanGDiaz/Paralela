@@ -21,7 +21,7 @@ import Servidor.contadorServidor;
  * implementacionCliente
  */
 public class implementacionCliente extends UnicastRemoteObject implements Runnable {
-    private int PANEL_HEIGHT = 550;
+    private int PANEL_HEIGHT = 650;
     private int PANEL_WIDTH = 500;
     private int id, contador;
     private contadorServidor servidor;
